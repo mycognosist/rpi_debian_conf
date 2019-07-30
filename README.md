@@ -2,6 +2,8 @@
 
 Configuration instructions, files and scripts for deploying Debian Buster to a Raspberry Pi 3.
 
+_Work in progress._
+
 **Network**
 
 In this configuration, the RPi connects to other networks with the `wlan0` interface and deploys an access point on the `ap0` interface. Only one of these modes is active at a time (client or access point).
