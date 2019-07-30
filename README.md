@@ -6,6 +6,8 @@ Configuration instructions, files and scripts for deploying Debian Buster to a R
 
 In this configuration, the RPi connects to other networks with the `wlan0` interface and deploys an access point on the `ap0` interface. Only one of these modes is active at a time (client or access point).
 
+Networking is handled with `wpa_supplicant`, `hostapd` and `dnsmasq`.
+
 ### Prerequisite Steps
 
 Download the latest Debian Buster preview image for RPi3 and flash it to an SD card (card is located at `/dev/mmcblk0` in this case):
