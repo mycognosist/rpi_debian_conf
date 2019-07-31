@@ -40,7 +40,7 @@ reboot now
 [ login ]
 
 apt-get update && apt-get upgrade -y  
-apt-get install vim man-db locales iw hostapd dnsmasq sudo -y  
+apt-get install vim man-db locales iw hostapd dnsmasq git python-smbus i2c-tools build-essential curl sudo -y  
 nano /etc/locale.gen
 
 [ uncomment # en_US.UTF-8 UTF-8 and save  ]
@@ -136,3 +136,16 @@ sudo systemctl stop hostapd
 sudo systemctl stop dnsmasq  
 sudo systemctl start wpa_supplicant  
 sudo ifup wlan0
+
+[ setup i2c and rtc ]
+sudo /etc/modules
+
+i2c-dev
+i2c-bcm2835
+rtc-ds1307
+
+:wq
+
+[ install rust - choose: 1. default, 2. nightly, 3. default ]
+curl https://sh.rustup.rs -sSf | sh
+
