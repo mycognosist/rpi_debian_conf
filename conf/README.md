@@ -8,4 +8,6 @@
 /etc/systemd/system/activate-rtc.service  
 /etc/modules  
 /etc/hostapd/hostapd.conf  
+/etc/default/hostapd
 /etc/dnsmasq.conf
+/etc/dhcpd.conf

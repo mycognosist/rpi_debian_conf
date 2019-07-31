@@ -11,17 +11,14 @@ import sys
 
 # Save arguments
 username = sys.argv[1]
-password = sys.argv[2]
 
 # Update Pi and install requirements
 subprocess.call(["apt-get","update", "-y"])
 subprocess.call(["apt-get","upgrade", "-y"])
 subprocess.call(["apt-get","install", "vim", "man-db", "locales", "iw", "hostapd", "dnsmasq", "git", "python-smbus", "i2c-tools", "build-essential", "curl", "sudo", "-y"])
-subprocess.call(["adduser", username])
-subprocess.call(["echo", password, "|", "passwd", "--stdin", username])
+subprocess.call(["/usr/sbin/adduser", username])
 
 # Overwrite configuration files
-subprocess.call(["cd", "rpi_debian_conf"])
 subprocess.call(["cp", "conf/interfaces", "/etc/network/interfaces"])
 subprocess.call(["cp", "conf/hostapd", "/etc/default/hostapd"])
 subprocess.call(["cp", "conf/hostapd.conf", "/etc/hostapd/hostapd.conf"])
