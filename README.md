@@ -58,7 +58,7 @@ nano /etc/network/interfaces
 
 Includes `deploy_client.sh` and `deploy_ap.sh`. These two scripts allow easy switching between client and access point modes.
 
-The `setup_dev_env.py` script can be executed once your Pi is internet-connected. It takes <USER> and <PASS> arguments to create a new system user. The script will install system requirements and copy configuration files relating to networking, I2C and RTC.
+The `setup_dev_env.py` script can be executed once your Pi is internet-connected. It takes `<USER>` and `<PASS>` arguments to create a new system user. The script will install system requirements and copy configuration files relating to networking, I2C and RTC.
 
 _TODO: Add flags to (de)select I2C, RTC and Rust install & config._
 
