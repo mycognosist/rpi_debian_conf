@@ -40,7 +40,7 @@ reboot now
 [ login ]
 
 apt-get update && apt-get upgrade -y  
-apt-get install vim man-db locales iw hostapd dnsmasq git python-smbus i2c-tools build-essential curl sudo -y  
+apt-get install vim man-db locales iw hostapd dnsmasq git python-smbus i2c-tools build-essential curl mosh sudo -y  
 nano /etc/locale.gen
 
 [ uncomment # en_US.UTF-8 UTF-8 and save  ]
