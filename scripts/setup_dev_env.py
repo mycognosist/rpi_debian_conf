@@ -15,7 +15,7 @@ username = sys.argv[1]
 # Update Pi and install requirements
 subprocess.call(["apt-get","update", "-y"])
 subprocess.call(["apt-get","upgrade", "-y"])
-subprocess.call(["apt-get","install", "vim", "man-db", "locales", "iw", "hostapd", "dnsmasq", "git", "python-smbus", "i2c-tools", "build-essential", "curl", "sudo", "-y"])
+subprocess.call(["apt-get","install", "vim", "man-db", "locales", "iw", "hostapd", "dnsmasq", "git", "python-smbus", "i2c-tools", "build-essential", "curl", "mosh", "sudo", "-y"])
 subprocess.call(["/usr/sbin/adduser", username])
 
 # Overwrite configuration files
